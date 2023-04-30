@@ -14,9 +14,9 @@ Install the script for your project:
 
 ```bash
 # NPM
-npm install --save-dev @mgr/simple-strapi-types
+npm install --save-dev @mgrdevport/simple-strapi-types
 # YARN
-yarn add -D @mgr/simple-strapi-types
+yarn add -D @mgrdevport/simple-strapi-types
 ```
 
 Then set up a script in your `package.json`
