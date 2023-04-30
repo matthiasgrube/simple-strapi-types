@@ -1,6 +1,6 @@
 {
   "name": "@mgrdevport/simple-strapi-types",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple typescript interface generator for Strapi 4 models",
   "bin": {
     "st4s": "./bin/index.js"
