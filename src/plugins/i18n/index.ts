@@ -20,7 +20,7 @@ const addLocaleToLocalizedContentTypes: HookTypes['AfterReadSchema'] = (state, {
         attributes.localizations = {
             type: 'relation',
             relation: 'oneToMany',
-            target: `api::${name}.${name}`, // TODO: make this more complete
+            target: `api::${name}.${name}`,
         };
     });
 };

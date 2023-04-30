@@ -3,7 +3,7 @@ import { File } from '../../file/File';
 export class UrlAliasGet extends File {
     constructor() {
         const baseName = 'url-alias';
-        super(baseName, 'plugins/url-alias', 'pascal'); // TODO: figure out how to change the casing
+        super(baseName, 'plugins/url-alias', 'pascal');
     }
 
     getStrapiName() {

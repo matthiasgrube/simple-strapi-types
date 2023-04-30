@@ -44,8 +44,8 @@ export default class InterfaceManager {
         useCategoryPrefix: true,
         componentPrefix: '',
         componentPrefixOverridesPrefix: false,
-        builtinsPrefix: '', // TODO: make this work
-        builtinsPrefixOverridesPrefix: false, // TODO: make this work
+        builtinsPrefix: '',
+        builtinsPrefixOverridesPrefix: false,
         deleteOld: false,
         prettierFile: null,
         fileCaseType: 'pascal' as caseType,
@@ -83,7 +83,6 @@ export default class InterfaceManager {
         this.PluginManager.sortHooks();
     }
 
-    // TODO: this function let's the user register their own plugins
     registerPlugin() {
         throw new Error('Not implemented');
     }

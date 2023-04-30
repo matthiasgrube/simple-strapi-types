@@ -27,7 +27,6 @@ export class ExtraType extends File {
     }
 
     toString() {
-        // TODO: make this more dynamic
         return `export ${this.typeString}`;
     }
 }
