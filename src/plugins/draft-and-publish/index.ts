@@ -6,8 +6,11 @@ import { PluginRegister } from '../types';
 const addFieldsToContentTypes: HookTypes['AfterReadSchema'] = (state, schema) => {
     const { apiSchemas } = schema;
     apiSchemas.forEach(({ name, schema }) => {
+        if (!schema?.attributes) {
+            return;
+        }
         const { attributes, options = {} } = schema;
-        if (!attributes || options?.draftAndPublish !== true) {
+        if (options?.draftAndPublish !== true) {
             return;
         }
         const fieldNames = ['publishedAt', 'createdAt', 'updatedAt'];
