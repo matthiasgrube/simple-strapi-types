@@ -178,16 +178,18 @@ export default class InterfaceManager {
         this.PluginManager.invoke(Events.BeforeReadSchemas, this);
 
         apiSchemas.forEach((schema) => {
-            const { name, schema: { attributes } } = schema;
-            const strapiName = `api::${name}.${name}`;
-            const inter = new Interface(
-                name,
-                attributes,
-                './',
-                this.Options.fileCaseType,
-                this.Options.prefix
-            );
-            this.addType(strapiName, inter);
+            if (schema?.schema?.attributes) {
+                const { name, schema: { attributes } } = schema;
+                const strapiName = `api::${name}.${name}`;
+                const inter = new Interface(
+                    name,
+                    attributes,
+                    './',
+                    this.Options.fileCaseType,
+                    this.Options.prefix
+                );
+                this.addType(strapiName, inter);
+            }
         });
 
         componentSchemas.forEach((category) => {

@@ -7,7 +7,7 @@ const addFieldsToContentTypes: HookTypes['AfterReadSchema'] = (state, schema) =>
     const { apiSchemas } = schema;
     apiSchemas.forEach(({ name, schema }) => {
         const { attributes, options = {} } = schema;
-        if (options?.draftAndPublish !== true) {
+        if (!attributes || options?.draftAndPublish !== true) {
             return;
         }
         const fieldNames = ['publishedAt', 'createdAt', 'updatedAt'];
